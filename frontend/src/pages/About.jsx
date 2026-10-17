@@ -8,13 +8,11 @@ export default function About() {
   useEffect(() => {
     fetchAbout()
       .then(setData)
-      .catch(() => setError("Could not load about info. Is the backend running?"));
+      .catch(() => setError("Could not load about info."));
   }, []);
 
   if (error) return <p className="status">{error}</p>;
   if (!data) return <p className="status">Loading...</p>;
-
-  const { currently_reading, strava_streak_days, strava_url, books_read_this_year } = data.life ?? {};
 
   return (
     <section className="about">
@@ -22,46 +20,22 @@ export default function About() {
       <p className="tagline">{data.tagline}</p>
       <p className="bio">{data.bio}</p>
       <ul className="links">
-        {Object.entries(data.links).map(([label, url]) => (
-          <li key={label}>
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              {label}
-            </a>
-          </li>
-        ))}
+        {Object.entries(data.links).map(([label, url]) => {
+          const isMailto = url.startsWith("mailto:");
+          return (
+            <li key={label}>
+              <a
+                href={url}
+                className={isMailto ? "" : "ext"}
+                target={isMailto ? undefined : "_blank"}
+                rel={isMailto ? undefined : "noopener noreferrer"}
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
-      <div className="life-stats">
-        <ul>
-          <li>
-            <span>currently reading: </span>
-            {currently_reading?.title ? (
-              <a href={currently_reading.goodreads_url} target="_blank" rel="noopener noreferrer">
-                {currently_reading.title}
-              </a>
-            ) : (
-              <span className="placeholder">—</span>
-            )}
-          </li>
-          <li>
-            <span>strava streak: </span>
-            {strava_streak_days != null ? (
-              <a href={strava_url} target="_blank" rel="noopener noreferrer">
-                {strava_streak_days} days
-              </a>
-            ) : (
-              <span className="placeholder">—</span>
-            )}
-          </li>
-          <li>
-            <span>books read this year: </span>
-            {books_read_this_year != null ? (
-              <span>{books_read_this_year}</span>
-            ) : (
-              <span className="placeholder">—</span>
-            )}
-          </li>
-        </ul>
-      </div>
     </section>
   );
 }

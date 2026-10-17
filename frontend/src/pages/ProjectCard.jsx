@@ -6,12 +6,12 @@ export default function ProjectCard({ project }) {
       <p className="tech">Tech: {project.tech.join(", ")}</p>
       <div className="project-links">
         {project.github_url && (
-          <a href={project.github_url} target="_blank" rel="noopener noreferrer">
+          <a href={project.github_url} className="ext" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
         )}
         {project.live_url && (
-          <a href={project.live_url} target="_blank" rel="noopener noreferrer">
+          <a href={project.live_url} className="ext" target="_blank" rel="noopener noreferrer">
             Live Site
           </a>
         )}

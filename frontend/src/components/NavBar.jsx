@@ -1,12 +1,20 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 export default function NavBar() {
   return (
     <nav>
       <span className="site-name">Sarah Rosenkrantz</span>
-      <Link to="/">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/blog">Blog</Link>
+      <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
+        About
+      </NavLink>
+      <NavLink to="/projects" className={({ isActive }) => (isActive ? "active" : "")}>
+        Projects
+      </NavLink>
+      <NavLink to="/blog" className={({ isActive }) => (isActive ? "active" : "")}>
+        Blog
+      </NavLink>
+      <ThemeToggle />
     </nav>
   );
 }

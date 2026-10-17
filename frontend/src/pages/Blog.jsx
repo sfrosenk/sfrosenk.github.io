@@ -8,7 +8,7 @@ export default function Blog() {
   useEffect(() => {
     fetchBlog()
       .then(setPosts)
-      .catch(() => setError("Could not load blog. Is the backend running?"));
+      .catch(() => setError("Could not load blog."));
   }, []);
 
   if (error) return <p className="status">{error}</p>;

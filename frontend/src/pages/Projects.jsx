@@ -9,7 +9,7 @@ export default function Projects() {
   useEffect(() => {
     fetchProjects()
       .then(setProjects)
-      .catch(() => setError("Could not load projects. Is the backend running?"));
+      .catch(() => setError("Could not load projects."));
   }, []);
 
   if (error) return <p className="status">{error}</p>;

@@ -1,19 +1,10 @@
 {
   "name": "Sarah Rosenkrantz",
   "tagline": "Software developer and outdoors enthusiast and lifelong learner.",
-  "bio": "I am a software engineer for Deutsche Bank in Cary. I am really passionate about conservation and outdoor education. Also an apsiring mountainer.",
+  "bio": "I’m a software engineer at Deutsche Bank, working on AI enablement, and serve on the board of Muddy Sneakers, a nonprofit focused on outdoor education. A proud NC State grad, I’m passionate about solving problems, exploring new ideas, and finding ways to make a difference. Outside of work, I enjoy playing beach volleyball, backpacking, and getting lost in a good book.",
   "links": {
     "github": "https://github.com/sfrosenk",
-    "linkedin": "https://www.linkedin.com/in/sarah-rosenkrantz/m/in/yourhandle",
-    "email": "sarahfrosenkrantz@gmail.com"
-  },
-  "life": {
-    "currently_reading": {
-      "title": null,
-      "goodreads_url": null
-    },
-    "strava_streak_days": null,
-    "strava_url": null,
-    "books_read_this_year": null
+    "linkedin": "https://www.linkedin.com/in/sarah-rosenkrantz/",
+    "email": "mailto:sarahfrosenkrantz@gmail.com"
   }
 }

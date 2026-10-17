@@ -33,8 +33,13 @@ Changes take effect on the next build/deploy (these are static files bundled wit
 
 ## Deploying
 
-Pushing to `main` builds the site and publishes it automatically via [.github/workflows/deploy.yml](.github/workflows/deploy.yml).
+Deploys are manual, not automatic on push. To publish the current `main` branch:
 
-One-time setup: in the repo's **Settings → Pages**, set **Source** to "GitHub Actions". After that, every push to `main` redeploys https://sfrosenk.github.io.
+1. Go to the repo on GitHub → **Actions** tab → **Deploy to GitHub Pages** (left sidebar)
+2. Click **Run workflow** → **Run workflow**
+
+That builds [frontend/](frontend/) and publishes it via [.github/workflows/deploy.yml](.github/workflows/deploy.yml). You can also trigger it from the CLI with `gh workflow run deploy.yml`.
+
+One-time setup: in the repo's **Settings → Pages**, set **Source** to "GitHub Actions".
 
 No backend, no separate hosting account, no CORS config — it's all static files served by GitHub Pages.

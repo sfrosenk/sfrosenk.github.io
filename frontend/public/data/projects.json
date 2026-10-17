@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Personal Website",
+    "description": "A personal site built with React and FastAPI.",
+    "tech": ["React", "FastAPI", "Python"],
+    "github_url": "https://github.com/sfrosenk/sfrosenk.github.io",
+    "live_url": null
+  },
+  {
+    "id": 2,
+    "title": "Curator's Compass",
+    "description": "Full-stack data product catalog developed as part of a 5-person team sponsored by SAS Data Management. Built to improve management of related data assets across a 10M+ asset dataset. Designed and implemented a suggestion algorithm to recommend groupings of data assets based on metadata similarity. Wrote and maintained unit, integration, and system tests for both frontend and backend.",
+    "tech": ["Python", "React", "Docker"],
+    "github_url": null,
+    "live_url": null
+  },
+  {
+    "id": 3,
+    "title": "Synthetic Data Generation Chatbot",
+    "description": "Chatbot developed during a SAS internship that interfaces with SAS's synthetic data generator. Used OpenAI for natural language processing.",
+    "tech": ["Go", "OpenAI"],
+    "github_url": null,
+    "live_url": null
+  }
+]

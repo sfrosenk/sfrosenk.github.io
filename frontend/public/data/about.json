@@ -1,0 +1,19 @@
+{
+  "name": "Sarah Rosenkrantz",
+  "tagline": "Software developer and outdoors enthusiast and lifelong learner.",
+  "bio": "I am a software engineer for Deutsche Bank in Cary. I am really passionate about conservation and outdoor education. Also an apsiring mountainer.",
+  "links": {
+    "github": "https://github.com/sfrosenk",
+    "linkedin": "https://www.linkedin.com/in/sarah-rosenkrantz/m/in/yourhandle",
+    "email": "sarahfrosenkrantz@gmail.com"
+  },
+  "life": {
+    "currently_reading": {
+      "title": null,
+      "goodreads_url": null
+    },
+    "strava_streak_days": null,
+    "strava_url": null,
+    "books_read_this_year": null
+  }
+}

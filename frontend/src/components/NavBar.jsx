@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function NavBar() {
   return (
     <nav>
-      <span className="site-name">Sarah Rosenkrantz</span>
+      
       <NavLink to="/" end className={({ isActive }) => (isActive ? "active" : "")}>
         About
       </NavLink>

@@ -36,7 +36,6 @@ export default function About() {
   return (
     <section className="about">
       <h1>{data.name}</h1>
-      <p className="tagline">{data.tagline}</p>
       <p className="bio">{renderBio(data.bio)}</p>
       <ul className="links">
         {Object.entries(data.links).map(([label, url]) => {

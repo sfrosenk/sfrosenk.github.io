@@ -8,7 +8,7 @@
   --accent-h: 265deg;
   --accent-s: 55%;
   --accent-l: 48%;
-  --bg: 232, 222, 242;
+  --bg: 255, 255, 255;
   --fg: 42, 31, 61;
   --muted: 107, 91, 128;
   --border: 123, 74, 196;
@@ -136,12 +136,6 @@ main {
 .about h1 {
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
-}
-
-.about .tagline {
-  color: rgba(var(--muted), 1);
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
 }
 
 .about .bio {

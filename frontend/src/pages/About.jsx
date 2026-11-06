@@ -14,11 +14,30 @@ export default function About() {
   if (error) return <p className="status">{error}</p>;
   if (!data) return <p className="status">Loading...</p>;
 
+  const renderBio = (bio) =>
+    bio.split(/(Muddy Sneakers)/g).map((part, index) => {
+      if (part === "Muddy Sneakers") {
+        return (
+          <a
+            key={`${part}-${index}`}
+            href={data.links["muddy sneakers"]}
+            className="ext"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {part}
+          </a>
+        );
+      }
+
+      return <span key={`${part}-${index}`}>{part}</span>;
+    });
+
   return (
     <section className="about">
       <h1>{data.name}</h1>
       <p className="tagline">{data.tagline}</p>
-      <p className="bio">{data.bio}</p>
+      <p className="bio">{renderBio(data.bio)}</p>
       <ul className="links">
         {Object.entries(data.links).map(([label, url]) => {
           const isMailto = url.startsWith("mailto:");
